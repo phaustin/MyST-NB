@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
-    <title>Tex parsing problem? &#8212; Numeric course 0.1 documentation</title>
+    <title>two test equations &#8212; Numeric course 0.1 documentation</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
     <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
@@ -26,8 +26,7 @@
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="two test equations" href="lab8_minimal.html" />
-    <link rel="prev" title="Tex parsing problem?" href="lab8_dollar_delim.html" />
+    <link rel="prev" title="Tex parsing problem?" href="lab8_env_delim.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="docsearch:language" content="en">
@@ -54,12 +53,12 @@
         <a class="nav-link" href="lab8_dollar_delim.html">Lab 8 dollar signs</a>
     </li>
     
-    <li class="nav-item active">
-        <a class="nav-link" href="">Lab 8 environ</a>
+    <li class="nav-item ">
+        <a class="nav-link" href="lab8_env_delim.html">Lab 8 environ</a>
     </li>
     
-    <li class="nav-item ">
-        <a class="nav-link" href="lab8_minimal.html">Lab 8 minimal</a>
+    <li class="nav-item active">
+        <a class="nav-link" href="">Lab 8 minimal</a>
     </li>
     
     
@@ -91,9 +90,9 @@
       
       
       
+      
+      
         
-      
-      
       
       
     </ul>
@@ -106,18 +105,8 @@
           <div class="d-none d-xl-block col-xl-2 bd-toc">
               
 
-
-<div class="tocsection onthispage"><i class="fas fa-list"></i> On this page</div>
 <nav id="bd-toc-nav">
     <ul class="nav section-nav flex-column">
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#introduction" class="nav-link">Introduction</a>
-        </li>
-    
-        <li class="nav-item toc-entry toc-h2">
-            <a href="#section-new" class="nav-link">Section new</a>
-        </li>
     
     </ul>
 </nav>
@@ -130,68 +119,17 @@
               
               <div>
                 
-  <div class="section" id="tex-parsing-problem">
-<h1>Tex parsing problem?<a class="headerlink" href="#tex-parsing-problem" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<div id="Figure-Model-Ocean">
-<strong>Figure Model Ocean</strong> The rectangular ocean with flat bottom, ignoring curvature
-effects.
-</div>
-<p>Let’s see an unescaped apostrophe.</p>
-<p>More information on what is a <span class="math notranslate nohighlight">\(\beta\)</span>-plane and on the neglect of
-curvature terms in the <span class="math notranslate nohighlight">\(\beta\)</span>-plane approximation is given in the
-appendix.</p>
-<p>If we assume that the ocean is homogeneous (it has constant density
-throughout), then the equations governing the fluid motion on the
-<span class="math notranslate nohighlight">\(\beta\)</span>-plane are:</p>
-<div id="eq:xmom">(X-Momentum Eqn)</div><div class="math notranslate nohighlight" id="equation-eq-one">
-<span class="eqno">(1)<a class="headerlink" href="#equation-eq-one" title="Permalink to this equation">¶</a></span>\[
-\frac{\partial u}{\partial t} + u \frac {\partial u}{\partial x} + v \frac {\partial u}{\partial y} + w \frac{\partial u}{\partial z} - fv = - \, \frac{1}{\rho} \, \frac {\partial p}{\partial x}
-+ A_v \, \frac{\partial^2 u}{\partial z^2} + A_h \, \nabla^2 u
-\]</div>
-<div id="eq:ymom">(Y-Momentum Eqn)</div>
+  <div class="section" id="two-test-equations">
+<h1>two test equations<a class="headerlink" href="#two-test-equations" title="Permalink to this headline">¶</a></h1>
 <p>\begin{equation}
 \frac{\partial v}{\partial t} + u \frac{\partial v}{\partial x} + v \frac{\partial v}{\partial y} + w \frac{\partial v}{\partial z} + fu = - , \frac{1}{\rho} , \frac{\partial p}{\partial y}</p>
 <ul class="simple">
 <li><p>A_v , \frac{\partial^2 v}{\partial z^2} + A_h , \nabla^2 v
 \end{equation}</p></li>
 </ul>
-<div id="eq:hydrostatic">(Hydrostatic Eqn)</div>
-<p>\begin{equation}
-\frac{\partial p}{\partial z} = - \rho g
-\end{equation}</p>
-<div id="eq:continuity">(Continuity Eqn)</div>
 <p>\begin{equation}
 \frac {\partial u}{\partial x} + \frac{\partial v}{\partial y} = - , \frac{\partial w}{\partial z}
 \end{equation}</p>
-<p>where</p>
-<ul class="simple">
-<li><p>(<a class="reference external" href="#eq:xmom">X-Momentum Eqn</a>) and (<a class="reference external" href="#eq:ymom">Y-Momentum Eqn</a>) are the lateral momentum equations,</p></li>
-<li><p>(<a class="reference external" href="#eq:hydrostatic">Hydrostatic Eqn</a>) is the hydrostatic balance (and replaces the vertical momentum
-equation), and</p></li>
-<li><p>(<a class="reference external" href="#eq:continuity">Continuity Eqn</a>) is the continuity (or incompressibility or conservation of volume) condition.</p></li>
-</ul>
-<p>The variables and parameters appearing above are:</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\((u,v,w)\)</span>, the fluid velocity components;</p></li>
-<li><p><span class="math notranslate nohighlight">\(f(y)\)</span>, the Coriolis parameter (assumed to be a linear function of
-<span class="math notranslate nohighlight">\(y\)</span>);</p></li>
-<li><p><span class="math notranslate nohighlight">\(\rho\)</span>, the density (assumed constant for a homogeneous fluid);</p></li>
-<li><p><span class="math notranslate nohighlight">\(A_v\)</span> and <span class="math notranslate nohighlight">\(A_h\)</span>, the vertical and horizontal coefficients of
-viscosity, respectively (constants);</p></li>
-<li><p><span class="math notranslate nohighlight">\(g\)</span>, the gravitational acceleration (constant).</p></li>
-</ul>
-<p>Equations (<a class="reference external" href="#eq:xmom">X-Momentum Eqn</a>), (<a class="reference external" href="#eq:ymom">Y-Momentum Eqn</a>), (<a class="reference external" href="#eq:hydrostatic">Hydrostatic Eqn</a>) and (<a class="reference external" href="#eq:continuity">Continuity Eqn</a>) form a non-linear system of PDE’s, for which there are many
-numerical methods available. However, due to the complexity of the
-equations, the methods themselves are <em>very complex</em>, and
-consume a large amount of CPU time. It is therefore advantageous for us
-to reduce the equations to a simpler form, for which common, and more
-efficient numerical solution techniques can be used.</p>
-</div>
-<div class="section" id="section-new">
-<h2>Section new<a class="headerlink" href="#section-new" title="Permalink to this headline">¶</a></h2>
-</div>
 </div>
 
 
@@ -200,8 +138,7 @@ efficient numerical solution techniques can be used.</p>
               
               <div class='prev-next-bottom'>
                 
-    <a class='left-prev' id="prev-link" href="lab8_dollar_delim.html" title="previous page">Tex parsing problem?</a>
-    <a class='right-next' id="next-link" href="lab8_minimal.html" title="next page">two test equations</a>
+    <a class='left-prev' id="prev-link" href="lab8_env_delim.html" title="previous page">Tex parsing problem?</a>
 
               </div>
               
