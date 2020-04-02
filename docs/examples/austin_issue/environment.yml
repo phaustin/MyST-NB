@@ -9,6 +9,7 @@ dependencies:
   - sphinx
   - pydata-sphinx-theme
   - ghp-import
+  - nbsphinx
   - pip
   - pip:
     - git+https://github.com/ExecutableBookProject/MyST-NB.git
