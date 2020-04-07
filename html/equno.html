@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="_static/jupyter-sphinx.css" />
     <link href="_static/css/index.css" rel="stylesheet">
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
@@ -22,8 +21,6 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/mystnb.js"></script>
     <script >var togglebuttonSelector = '.toggle, .tag_hide_input div.cell_input, .tag_hide_output div.cell_output, .tag_hide_cell.cell';</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -100,19 +97,39 @@
     <ul class="nav section-nav flex-column">
     
         <li class="nav-item toc-entry toc-h2">
+            <a href="#delimiters" class="nav-link">Delimiters</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
             <a href="#source-with" class="nav-link">Source – with $$</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h2">
+        <li class="nav-item toc-entry toc-h3">
             <a href="#display" class="nav-link">Display $$</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h2">
+        <li class="nav-item toc-entry toc-h3">
             <a href="#source-no" class="nav-link">Source – no $$</a>
         </li>
     
-        <li class="nav-item toc-entry toc-h2">
+        <li class="nav-item toc-entry toc-h3">
             <a href="#display-no" class="nav-link">Display no $$</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#aligned-equations" class="nav-link">aligned equations</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#align-numbering-single" class="nav-link">align numbering single</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#align-numbering-multiple" class="nav-link">align numbering multiple</a>
+        </li>
+    
+            </ul>
         </li>
     
     </ul>
@@ -128,20 +145,22 @@
                 
   <div class="section" id="equation-test">
 <h1>Equation test<a class="headerlink" href="#equation-test" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="delimiters">
+<h2>Delimiters<a class="headerlink" href="#delimiters" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="source-with">
-<h2>Source – with $$<a class="headerlink" href="#source-with" title="Permalink to this headline">¶</a></h2>
+<h3>Source – with $$<a class="headerlink" href="#source-with" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$$
 \begin{align}
 \dot{x} &amp; = \sigma(y-x) \\
 \dot{y} &amp; = \rho x - y - xz \\
 \dot{z} &amp; = -\beta z + xy
 \end{align}
-$$
+$$(eq:one)
 </pre></div>
 </div>
 </div>
 <div class="section" id="display">
-<h2>Display $$<a class="headerlink" href="#display" title="Permalink to this headline">¶</a></h2>
+<h3>Display $$<a class="headerlink" href="#display" title="Permalink to this headline">¶</a></h3>
 <div class="math notranslate nohighlight" id="equation-eq-one">
 <span class="eqno">(1)<a class="headerlink" href="#equation-eq-one" title="Permalink to this equation">¶</a></span>\[\begin{split}
 \begin{align}
@@ -152,23 +171,71 @@ $$
 \end{split}\]</div>
 </div>
 <div class="section" id="source-no">
-<h2>Source – no $$<a class="headerlink" href="#source-no" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">begin</span><span class="p">{</span><span class="n">align</span><span class="p">}</span>
+<h3>Source – no $$<a class="headerlink" href="#source-no" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>\<span class="n">begin</span><span class="p">{</span><span class="n">align</span><span class="o">*</span><span class="p">}</span>
 \<span class="n">dot</span><span class="p">{</span><span class="n">x</span><span class="p">}</span> <span class="o">&amp;</span> <span class="o">=</span> \<span class="n">sigma</span><span class="p">(</span><span class="n">y</span><span class="o">-</span><span class="n">x</span><span class="p">)</span> \\
 \<span class="n">dot</span><span class="p">{</span><span class="n">y</span><span class="p">}</span> <span class="o">&amp;</span> <span class="o">=</span> \<span class="n">rho</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span> <span class="o">-</span> <span class="n">xz</span> \\
 \<span class="n">dot</span><span class="p">{</span><span class="n">z</span><span class="p">}</span> <span class="o">&amp;</span> <span class="o">=</span> <span class="o">-</span>\<span class="n">beta</span> <span class="n">z</span> <span class="o">+</span> <span class="n">xy</span>
-\<span class="n">end</span><span class="p">{</span><span class="n">align</span><span class="p">}</span>
+\<span class="n">end</span><span class="p">{</span><span class="n">align</span><span class="o">*</span><span class="p">}</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="display-no">
-<h2>Display no $$<a class="headerlink" href="#display-no" title="Permalink to this headline">¶</a></h2>
-<p>\begin{align}
+<h3>Display no $$<a class="headerlink" href="#display-no" title="Permalink to this headline">¶</a></h3>
+<p>\begin{align*}
 \dot{x} &amp; = \sigma(y-x) \
 \dot{y} &amp; = \rho x - y - xz \
 \dot{z} &amp; = -\beta z + xy
-\end{align}</p>
+\end{align*}</p>
 <p>Reference <a class="reference internal" href="#equation-eq-one">(1)</a></p>
+</div>
+</div>
+<div class="section" id="aligned-equations">
+<h2>aligned equations<a class="headerlink" href="#aligned-equations" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="align-numbering-single">
+<h3>align numbering single<a class="headerlink" href="#align-numbering-single" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$$
+\begin{align} 
+g(X_{n}) &amp;= g(\theta)+g&#39;({\tilde{\theta}})(X_{n}-\theta) \notag \\
+\sqrt{n}[g(X_{n})-g(\theta)] &amp;= g&#39;\left({\tilde{\theta}}\right)
+  \sqrt{n}[X_{n}-\theta ] 
+\end{align} 
+$$(eq:align1)
+</pre></div>
+</div>
+<div class="math notranslate nohighlight" id="equation-eq-align1">
+<span class="eqno">(2)<a class="headerlink" href="#equation-eq-align1" title="Permalink to this equation">¶</a></span>\[\begin{split}
+\begin{align} 
+g(X_{n}) &amp;= g(\theta)+g'({\tilde{\theta}})(X_{n}-\theta) \notag \\
+\sqrt{n}[g(X_{n})-g(\theta)] &amp;= g'\left({\tilde{\theta}}\right)
+  \sqrt{n}[X_{n}-\theta ] 
+\end{align} 
+\end{split}\]</div>
+</div>
+<div class="section" id="align-numbering-multiple">
+<h3>align numbering multiple<a class="headerlink" href="#align-numbering-multiple" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$$
+\begin{split}
+\mathrm{Var}(\hat{\beta}) &amp; =\mathrm{Var}((X&#39;X)^{-1}X&#39;y)\\
+ &amp; =(X&#39;X)^{-1}X&#39;\mathrm{Var}(y)((X&#39;X)^{-1}X&#39;)&#39;  \label{eq:sub1}\\
+ &amp; =(X&#39;X)^{-1}X&#39;\mathrm{Var}(y)X(X&#39;X)^{-1}\notag\\
+ &amp; =(X&#39;X)^{-1}X&#39;\sigma^{2}IX(X&#39;X)^{-1}\\
+ &amp; =(X&#39;X)^{-1}\sigma^{2}\label{sub:2}
+ \end{split}
+ $$
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{split}
+\mathrm{Var}(\hat{\beta}) &amp; =\mathrm{Var}((X'X)^{-1}X'y)\\
+ &amp; =(X'X)^{-1}X'\mathrm{Var}(y)((X'X)^{-1}X')'  \label{eq:sub1}\\
+ &amp; =(X'X)^{-1}X'\mathrm{Var}(y)X(X'X)^{-1}\notag\\
+ &amp; =(X'X)^{-1}X'\sigma^{2}IX(X'X)^{-1}\\
+ &amp; =(X'X)^{-1}\sigma^{2}\label{sub:2}
+ \end{split}
+ \end{split}\]</div>
+</div>
 </div>
 </div>
 
