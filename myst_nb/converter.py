@@ -36,7 +36,7 @@ def is_myst_file(path):
     if not os.path.exists(path):
         return False
 
-    with open(path,encoding="utf-8") as handle:
+    with open(path, encoding="utf-8") as handle:
         # here we use an iterator, so that only the required lines are read
         is_myst = is_myst_notebook((line for line in handle))
 
